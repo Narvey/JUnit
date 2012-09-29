@@ -11,12 +11,14 @@ public class TestEnvelope {
 
 	@Before
 	public void setUp() throws Exception {
+		//TODO move some stuff here or delete this
 	}
 
 	@Test
 	public void testGetTotalCents() {
 		Envelope test = new Envelope();
 		assertEquals(0, test.getTotalCents());
+		//TODO Should we split this into two tests here?
 		Envelope test2 = new Envelope();
 		test2.setDimes(2);
 		test2.setDollars(2);
@@ -27,13 +29,13 @@ public class TestEnvelope {
 	}
 
 	@Test
-	public void testEnvelope() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEnvelopeIntIntIntIntInt() {
-		fail("Not yet implemented");
+	public void testEnvelopeParams() {
+		Envelope param = new Envelope(1,2,3,4,5);
+		assertEquals(1, param.getDollars());
+		assertEquals(2, param.getQuarters());
+		assertEquals(3, param.getDimes());
+		assertEquals(4, param.getNickels());
+		assertEquals(5, param.getPennies());
 	}
 
 }

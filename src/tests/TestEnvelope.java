@@ -1,5 +1,3 @@
-package tests;
-
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -8,17 +6,11 @@ import org.junit.Test;
 import classes.Envelope;
 
 public class TestEnvelope {
-
-	@Before
-	public void setUp() throws Exception {
-		//TODO move some stuff here or delete this
-	}
-
 	@Test
 	public void testGetTotalCents() {
 		Envelope test = new Envelope();
 		assertEquals(0, test.getTotalCents());
-		//TODO Should we split this into two tests here?
+		
 		Envelope test2 = new Envelope();
 		test2.setDimes(2);
 		test2.setDollars(2);
@@ -37,5 +29,5 @@ public class TestEnvelope {
 		assertEquals(4, param.getNickels());
 		assertEquals(5, param.getPennies());
 	}
-
 }
+>>>>>>> 8aa1b8ea169e95192cfaba5f283c9f6d7b3504bc

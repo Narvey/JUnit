@@ -8,12 +8,6 @@ import org.junit.Test;
 import classes.Envelope;
 
 public class TestEnvelope {
-
-	@Before
-	public void setUp() throws Exception {
-		//TODO move some stuff here or delete this
-	}
-
 	@Test
 	public void testGetTotalCents() {
 		Envelope test = new Envelope();

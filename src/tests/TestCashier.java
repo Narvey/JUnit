@@ -31,8 +31,6 @@ public class TestCashier {
 		assertEquals(29, customer.getTotalCents());
 	}
 
-
-	
 	@Test (expected = NegativeBalanceException.class)
 	public void testNegativeBalanceException() throws NegativeBalanceException {
 		Cashier cashier = new Cashier();

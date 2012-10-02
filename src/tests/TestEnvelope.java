@@ -29,7 +29,7 @@ public class TestEnvelope {
 	}
 
 	@Test
-	public void testEnvelopeParams() {
+	public void testEnvelopeParams() {//Test the parameterized constructor
 		Envelope param = new Envelope(1,2,3,4,5);
 		assertEquals(1, param.getDollars());
 		assertEquals(2, param.getQuarters());

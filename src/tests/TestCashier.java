@@ -6,11 +6,12 @@ import org.junit.Test;
 
 import classes.Cashier;
 import classes.Envelope;
+import classes.NegativeBalanceException;
 
 public class TestCashier {
 
 	@Test
-	public void testMakeChange() {
+	public void testMakeChange() throws NegativeBalanceException {
 		Cashier cashier = new Cashier();
 		
 		Envelope envelope = new Envelope(5,0,0,0,0);
@@ -22,5 +23,13 @@ public class TestCashier {
 		assertEquals(change.getDimes(), 1);
 		assertEquals(change.getNickels(), 1);
 		assertEquals(change.getPennies(), 3);
+	}
+	
+	@Test (expected = NegativeBalanceException.class)
+	public void testNegativeBalanceException() throws NegativeBalanceException {
+		Cashier cashier = new Cashier();
+		
+		Envelope envelope = new Envelope(3, 5, 2, 4, 10);
+		Envelope change = cashier.makeChange(envelope, 8, 3);
 	}
 }

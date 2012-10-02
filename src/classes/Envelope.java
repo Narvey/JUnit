@@ -19,7 +19,7 @@ public class Envelope {
 	}
 	
 	public int getTotalCents() {
-		return 0;
+		return dollars*100 + quarters*25 + dimes*10 + nickels*5 + pennies;
 	}
 	
 	//below this is just getters/setters.

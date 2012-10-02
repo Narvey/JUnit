@@ -1,3 +1,4 @@
+package tests;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -30,4 +31,4 @@ public class TestEnvelope {
 		assertEquals(5, param.getPennies());
 	}
 }
->>>>>>> 8aa1b8ea169e95192cfaba5f283c9f6d7b3504bc
+

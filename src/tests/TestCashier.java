@@ -9,6 +9,8 @@ import classes.Envelope;
 import classes.NegativeBalanceException;
 
 public class TestCashier {
+	Cashier cash;
+	
 	@Test
 	public void testMakeChange() throws NegativeBalanceException {
 		Cashier cashier = new Cashier();
@@ -23,12 +25,12 @@ public class TestCashier {
 		assertEquals(change.getNickels(), 1);
 		assertEquals(change.getPennies(), 3);
 	}
-	public void secondTest(){
+	public void secondTest() throws NegativeBalanceException{
 		Envelope customer = new Envelope(2, 3, 0, 0, 0);
 		customer = cash.makeChange(customer, 2, 46);
 		assertEquals(29, customer.getTotalCents());
 	}
-}
+
 
 	
 	@Test (expected = NegativeBalanceException.class)
